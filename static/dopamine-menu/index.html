@@ -1,0 +1,130 @@
+<!--
+vibecoded project
+thanks https://www.youtube.com/@ruriohama for the idea
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>✦ Dofamine Menu ✦</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1 class="site-header__title">✦ DOFAMINE MENU ✦</h1>
+    <button class="settings-btn" id="settings-btn" type="button" aria-label="Settings">⚙</button>
+  </header>
+
+  <main class="app">
+    <!-- Screen 0: Welcome -->
+    <section class="screen screen--active" id="screen-welcome">
+      <div class="welcome">
+        <div class="welcome__frame">
+          <p class="welcome__subtitle">Your personal pleasure concierge</p>
+          <button class="btn btn--primary" id="btn-open-menu" type="button">OPEN THE MENU</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screen 1: Energy -->
+    <section class="screen" id="screen-energy">
+      <div class="menu" id="menu-energy">
+        <h2 class="menu__title">How much energy do you have?</h2>
+        <div class="menu__cards">
+          <button class="menu-card" type="button" data-value="low">
+            <span class="menu-card__icon">🪫</span>
+            <span class="menu-card__title">Almost dead</span>
+          </button>
+          <button class="menu-card" type="button" data-value="medium">
+            <span class="menu-card__icon">🔋</span>
+            <span class="menu-card__title">Some juice left</span>
+          </button>
+          <button class="menu-card" type="button" data-value="high">
+            <span class="menu-card__icon">⚡</span>
+            <span class="menu-card__title">Wired &amp; restless</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screen 2: Time -->
+    <section class="screen" id="screen-time">
+      <div class="menu" id="menu-time">
+        <h2 class="menu__title">How much time do you have?</h2>
+        <div class="menu__cards">
+          <button class="menu-card" type="button" data-value="short">
+            <span class="menu-card__icon">⏳</span>
+            <span class="menu-card__title">Just a moment</span>
+          </button>
+          <button class="menu-card" type="button" data-value="medium">
+            <span class="menu-card__icon">🕐</span>
+            <span class="menu-card__title">About an hour</span>
+          </button>
+          <button class="menu-card" type="button" data-value="long">
+            <span class="menu-card__icon">🌅</span>
+            <span class="menu-card__title">Time is an illusion</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screen 3: Result -->
+    <section class="screen" id="screen-result">
+      <div class="result">
+        <div class="result-card" id="result-card">
+          <h2 class="result-card__title">Your dofamine awaits</h2>
+          <div class="result-card__body" id="result-body">
+            <h3 class="result-card__name" id="result-name"></h3>
+            <p class="result-card__desc" id="result-desc"></p>
+          </div>
+          <div class="result-card__actions">
+            <button class="btn btn--primary" id="btn-another" type="button">↻ ANOTHER ONE</button>
+            <button class="btn btn--accent" id="btn-perfect" type="button">✦ PERFECT</button>
+            <button class="btn" id="btn-startover" type="button">← START OVER</button>
+          </div>
+        </div>
+        <div class="empty-message" id="result-empty" hidden>
+          <p>You've blacklisted everything here! Visit Settings to unblock some.</p>
+          <button class="btn btn--primary" id="btn-empty-settings" type="button">⚙ SETTINGS</button>
+        </div>
+        <div class="confetti" id="confetti" hidden></div>
+      </div>
+    </section>
+
+    <!-- Screen 4: Settings -->
+    <section class="screen" id="screen-settings">
+      <div class="settings">
+        <h2 class="settings__title">Settings</h2>
+
+        <div class="settings__section">
+          <h3 class="settings__subtitle">History</h3>
+          <ul class="history-list" id="history-list"></ul>
+          <button class="btn btn--small" id="btn-clear-history" type="button">Clear history</button>
+        </div>
+
+        <div class="settings__section">
+          <h3 class="settings__subtitle">Blacklist</h3>
+          <ul class="blacklist-list" id="blacklist-list"></ul>
+        </div>
+
+        <div class="settings__section">
+          <h3 class="settings__subtitle">Danger zone</h3>
+          <button class="btn btn--small btn--danger" id="btn-reset-all" type="button">Reset all data</button>
+        </div>
+
+        <button class="btn btn--primary" id="btn-back" type="button">← BACK</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="site-footer__text">Made for restless minds</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

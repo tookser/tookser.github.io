@@ -14,7 +14,7 @@ defaultContentLanguage = "ru"
   themeColor = "green"
 
   # if you set this to 0, only submenu trigger will be visible
-  showMenuItems = 3 # что это
+  showMenuItems = 3
 
   # show selector to switch language
   showLanguageSelector = false
@@ -60,7 +60,7 @@ defaultContentLanguage = "ru"
     owner = "Иван Белашкин"
     keywords = "программирование, тестирование, QA, QC, Питон, python, дискретная математика, дискретка"
     copyright = ""
-    menuMore = "Внешние ссылки"
+    menuMore = "Ссылки на проекты"
     readMore = "Читать всё"
     readOtherPosts = "Остальные записи"
     newerPosts = "Более новые записи"
@@ -77,19 +77,29 @@ defaultContentLanguage = "ru"
         identifier = "glavn"
         name = "Главная"
         url = "/"
+        weight = 1
       [[languages.ru.menu.main]]
         identifier = "about"
         name = "Обо мне"
         url = "/about"
+        weight = 2
       [[languages.ru.menu.main]]
         identifier = "projects"
         name = "Мои проекты"
         url = "/projects"
+        weight = 3
       [[languages.ru.menu.main]]
         identifier = "psycho"
         name = "Сверхлокальный психотерапевт"
         url = "/therapist.html"
+        weight = 4
       [[languages.ru.menu.main]]
         identifier = "rpg"
         name = "Прототип rpg на ClojureScript"
         url = "/rpg.html"
+        weight = 5
+      [[languages.ru.menu.main]]
+        identifier = "dopamine-menu"
+        name = "«Дофаминовое меню»"
+        url = "/dopamine-menu/index.html"
+        weight = 6
